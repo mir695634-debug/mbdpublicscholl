@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.B.D. Public School</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); color: #333; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+.app-container { width: 100%; max-width: 500px; background-color: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin: 20px; }
+header { background-color: #4a6fa5; color: #fff; padding: 25px; text-align: center; }
+header h1 { margin: 0; font-size: 24px; }
+header p { margin: 5px 0 0; font-size: 14px; opacity: 0.9; }
+nav { background-color: #3b5998; display: flex; justify-content: space-around; padding: 12px 0; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; cursor: pointer; transition: color 0.3s; font-size: 14px; }
+nav a:hover { color: #f9d342; }
+.content { padding: 25px; height: 350px; overflow-y: auto; }
+.section { display: none; }
+.active { display: block; }
+h2 { color: #4a6fa5; margin-top: 0; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+.form-group { margin-bottom: 15px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px; color: #555; }
+input[type="text"], input[type="file"], textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
+button { background-color: #4a6fa5; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; font-weight: bold; transition: background-color 0.3s; }
+button:hover { background-color: #38537a; }
+.gallery-section { text-align: center; }
+.gallery-placeholder { border: 2px dashed #4a6fa5; padding: 30px; border-radius: 10px; margin-top: 15px; background-color: #f0f4f8; }
+.file-upload-btn { display: inline-block; background-color: #4a6fa5; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+.file-upload-btn:hover { background-color: #38537a; }
+</style>
+</head>
+<body>
+<div class="app-container">
+<header>
+<h1>M.B.D. Public School</h1>
+<p>Sawayajpur, Hardoi</p>
+</header>
+<nav>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('about')">About Us</a>
+<a onclick="showSection('admission')">Admission</a>
+<a onclick="showSection('gallery')">Gallery</a>
+<a onclick="showSection('contact')">Contact</a>
+</nav>
+<div class="content">
+<div id="home" class="section active">
+<h2>Welcome</h2>
+<p>Welcome to M.B.D. Public School, Sawayajpur, Hardoi. We are committed to a better future and a bright tomorrow for your child.</p>
+</div>
+<div id="about" class="section">
+<h2>About Us</h2>
+<p>Recognized by the UP Government since 2009, M.B.D. Public School provides quality education from primary levels and beyond.</p>
+<p>Our goal is not only to educate but also to instill strong moral values in an eco-friendly environment. We offer smart classes, AI technology, and modern project-based learning.</p>
+</div>
+<div id="admission" class="section">
+<h2>Admission Registration</h2>
+<form>
+<div class="form-group"><label>Student Name:</label><input type="text"></div>
+<div class="form-group"><label>Father's Name:</label><input type="text"></div>
+<div class="form-group"><label>Mother's Name:</label><input type="text"></div>
+<div class="form-group"><label>Address:</label><textarea></textarea></div>
+<div class="form-group"><label>Upload Photo:</label><input type="file" accept="image/*"></div>
+<div class="form-group"><label>Aadhar Number:</label><input type="text"></div>
+<div class="form-group"><label>PAN Number:</label><input type="text"></div>
+<div class="form-group"><label>Previous School:</label><input type="text"></div>
+<div class="form-group"><label>Class for Admission:</label><input type="text"></div>
+<button type="submit">Register Now</button>
+</form>
+</div>
+<div id="gallery" class="section gallery-section">
+<h2>Photo Gallery</h2>
+<p>Add and view your school photos here.</p>
+<div class="gallery-placeholder">
+<label class="file-upload-btn" for="photoInput">Choose Photo from Gallery</label>
+<input type="file" id="photoInput" accept="image/*" style="display: none;">
+</div>
+</div>
+<div id="contact" class="section">
+<h2>Contact Us</h2>
+<p><strong>Mobile Numbers:</strong> 9454546754, 9450864025</p>
+<p><strong>Email ID:</strong> mbdpss24@example.com</p>
+</div>
+</div>
+</div>
+<script>
+function showSection(sectionId) {
+var sections = document.getElementsByClassName('section');
+for (var i = 0; i < sections.length; i++) {
+sections[i].style.display = 'none';
+}
+document.getElementById(sectionId).style.display = 'block';
+}
+</script>
+</body>
+</html>
+
+    
