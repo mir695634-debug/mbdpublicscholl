@@ -1,2 +1,2 @@
-# mbdpublicscholl
+# mbdpublicschool
 Sawayajpur hardoi official website 
